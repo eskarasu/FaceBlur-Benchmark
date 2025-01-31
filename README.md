@@ -90,3 +90,13 @@ This project is designed for privacy protection applications. Always ensure you 
 ## License
 
 [MIT License](LICENSE)
+
+## Face Detection Methods
+
+| Method                   | Model Type            | Speed          | Accuracy      | Dependencies        | Suitable For            | Pros                                  | Cons                                      |
+|--------------------------|-----------------------|----------------|---------------|----------------------|-------------------------|----------------------------------------|-------------------------------------------|
+| OpenCV DNN Face Detector | Deep Learning (Caffe) | Fast            | High          | OpenCV, Caffe         | Real-time applications   | Fast and accurate                      | Requires pre-trained Caffe model          |
+| MTCNN                    | Deep Learning (CNN)   | Moderate        | Very High     | TensorFlow, Keras     | Complex scenarios        | High accuracy with multi-scale detection| Slower on CPU, complex implementation     |
+| Dlib HOG Face Detector    | Machine Learning (HOG)| Moderate        | Moderate      | Dlib                   | Real-time, low-resource  | Lightweight, works without GPU          | Less accurate for complex backgrounds     |
+| MediaPipe Face Detection  | Deep Learning         | Very Fast       | High          | MediaPipe, OpenCV     | Mobile, web applications | Optimized for real-time, lightweight    | May struggle with extreme angles          |
+| Haar Cascade Classifier   | Traditional ML        | Fast            | Low           | OpenCV                 | Simple applications      | Very fast, minimal dependencies         | High false-positive rate, low accuracy    |
